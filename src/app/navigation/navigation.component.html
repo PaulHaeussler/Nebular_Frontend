@@ -1,0 +1,80 @@
+<mat-sidenav-container class="navContainer" fullscreen>
+    <mat-sidenav #drawer mode="side" opened role="navigation" class="sidenav">
+        <mat-nav-list class="navList">
+
+            <a mat-list-item routerLink='/space'>
+                <mat-icon class="paddingRight" class="iconSize">home</mat-icon>
+            </a>
+
+            <a mat-list-item routerLink='/profile'>
+                <mat-icon class="paddingRight" class="iconSize">account_circle</mat-icon>
+            </a>
+
+            <a mat-list-item routerLink='/addModule'>
+                <mat-icon class="paddingRight" class="iconSize">library_add</mat-icon>
+            </a>
+
+            <a mat-list-item routerLink='/dashboard'>
+                <mat-icon class="paddingRight" class="iconSize">dashboard</mat-icon>
+            </a>
+
+            <a mat-list-item routerLink='/info'>
+                <mat-icon class="paddingRight" class="iconSize">info</mat-icon>
+            </a>
+
+            <a mat-list-item routerLink='/allModules'>
+                <mat-icon class="paddingRight" class="iconSize">extension</mat-icon>
+            </a>
+
+            <a mat-list-item routerLink='/settings'>
+                <mat-icon class="paddingRight" class="iconSize">settings</mat-icon>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <mat-toolbar class="toolbar">
+            <mat-toolbar-row>
+                    <span class="spacer"></span>
+
+                <span>
+                    <div *ngIf="!editMode">
+                        <div class="nameSpace">
+                            <span>{{nameSpace}}</span>
+                            <button mat-button class="navbarButton" (click)="editNamespace(name)">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div *ngIf="editMode">
+                        <!--<div class="col-md">-->
+
+                        <mat-form-field>
+                            <input matInput [(ngModel)]="nameSpace">
+                        </mat-form-field>
+
+                        <button mat-button class="navbarButton" (click)="editDone()">
+                            <mat-icon>done</mat-icon>
+                        </button>
+                        <!--</div>-->
+                    </div>
+                    </span>
+                    <!--</div>-->
+
+                    <span class="spacer"></span>
+                    <!--div md-direction="right">-->
+                        <button mat-button class="navbarButton" (click)="showInfo()">
+                            <mat-icon>info</mat-icon>
+                        </button>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <router-outlet>
+        </router-outlet>
+
+        <footer class="footer">
+            <p>by Nebular</p>
+        </footer>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

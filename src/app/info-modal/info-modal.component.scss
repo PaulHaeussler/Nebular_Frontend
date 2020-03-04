@@ -1,0 +1,27 @@
+.modal {
+    align-items: center;
+    padding: 0!important;
+
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .spacer {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  .bold {
+      font-weight: bold;
+  }

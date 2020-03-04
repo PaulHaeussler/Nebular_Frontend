@@ -1,0 +1,33 @@
+<div class="position">
+  <h1 mat-dialog-title>{{data.name}}</h1>
+  <mat-dialog-content>
+    <p>This is module {{data.name}}.</p>
+
+    <!-- Example: Show Content from variable, propably needed later-->
+    <!--mat-form-field>
+    <input matInput [(ngModel)]="data.animal">
+  </mat-form-field>-->
+
+    <p>This module calculates the correlation of the factors '{{data.factorY}}' and '{{data.factorZ}}'.</p>
+    <br />
+    <mat-divider></mat-divider>
+    <br />
+
+    <h6>Add Data to train the KI</h6>
+      <div *ngFor="let dataField of dataFields">
+        <mat-form-field>
+          <input matInput [(ngModel)]="dataField">
+        </mat-form-field>
+
+        <button mat-button (click)="addData(dataField)">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+  </mat-dialog-content>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="onCancle()">Cancle</button>
+    <button mat-button [mat-dialog-close]="data.name" cdkFocusInitial (click)="runModule(dataField)">Run Module</button>
+  </div>
+
+</div>

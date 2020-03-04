@@ -1,0 +1,73 @@
+<div class="bg">
+
+    <div class="content" role="main">
+
+        <!-- Circles -->
+
+        <div class="container">
+                <div class="row">
+                    <div class="spaceTop"></div>
+                    <div class="col-md"></div>
+                </div>
+            <div class="row">
+                <div class="spaceLeft">
+                    <img class="circle-link" src="assets/img/planets/planet3.png" (click)="openDialog('planet3', 'Interests', 'hobby', 'favorite sport')">
+                </div>
+                <div class="col-md"></div>
+                <div class="col-md">
+                    <img class="circle-link" src="assets/img/planets/planet5.png" (click)="openDialog('planet5', 'Delay', 'time of the day', 'delay')">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm"></div>
+                <div class="spaceLeft">
+                    <img class="circle-link" src="assets/img/planets/planet2.png" (click)="openDialog('planet2', 'Music', 'genre', 'favorite artist')">
+                </div>
+                <div class="col-sm"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <img class="circle-link" src="assets/img/planets/planet4.png" (click)="openDialog('planet4', 'Games', 'genre', 'release date')">
+                </div>
+                <div class="col-sm"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm"></div>
+                <div class="col-sm"></div>
+                <div class="col-sm"></div>
+                <div class="spaceRight">
+                    <img class="circle-link" src="assets/img/planets/planet6.png" (click)="openDialog('planet6', 'Jobs', 'last job title', 'hobby')">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+    <!-- Example how to pass Data from modal to page (example was used in app.modules.html in a tutorial) -->
+  
+    <!--  
+    <div>
+    <ol>
+      <li>
+        <mat-form-field>
+          <input matInput [(ngModel)]="name" placeholder="What's your name?">
+        </mat-form-field>
+      </li>
+      <li>
+        <button mat-raised-button (click)="openDialog()">Pick one</button>
+      </li>
+      <br />
+      <li *ngIf="animal">
+        You chose: <p style="font-weight: bold">{{animal}}</p>
+      </li>
+    </ol>
+  </div>
+
+-->
