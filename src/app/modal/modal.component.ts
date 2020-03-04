@@ -9,7 +9,7 @@ import { Module } from '../module';
 })
 export class ModalComponent implements OnInit {
 
-  //animal: string;
+  // animal: string;
   tag: string;
   name: string;
   factorY: string;
@@ -22,13 +22,13 @@ export class ModalComponent implements OnInit {
     public dialogRef: MatDialogRef<ModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Module) {
 
-      this.dataFields.push("");
+      this.dataFields.push('');
     }
 
   onCancel(): void {
     this.dataFields = [];
     this.dialogRef.close();
-    console.log("Cancel clicked");
+    console.log('Cancel clicked');
   }
 
   addData(dataField) {
@@ -36,15 +36,15 @@ export class ModalComponent implements OnInit {
     this.singleField = false;
 
     console.log(this.singleField);
-    console.log("dataField: " + dataField + " of datafields Array: " + this.dataFields);
+    console.log('dataField: ' + dataField + ' of datafields Array: ' + this.dataFields);
     dataField = '';
     return dataField;
   }
 
   runModule(dataField): void {
     this.dataFields.push(dataField);
-    this.dataFields.splice(0,1);
-    console.log("Run Module clicked; dataFieldsArray: " + this.dataFields);
+    this.dataFields.splice(0, 1);
+    console.log('Run Module clicked; dataFieldsArray: ' + this.dataFields);
   }
 
   ngOnInit() {

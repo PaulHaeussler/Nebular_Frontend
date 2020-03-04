@@ -17,8 +17,8 @@ export class NavigationComponent implements OnInit {
   constructor(
     public dialog: MatDialog
     //public dialogConfig: MatDialogConfig
-    ) { 
-    this.nameSpace = "Name your space"
+    ) {
+    this.nameSpace = 'Name your space'
   }
 
   ngOnInit() {
@@ -35,19 +35,19 @@ export class NavigationComponent implements OnInit {
 
   public showInfo() {
       console.log("Info clicked!");
-      
+
       /*
       const dialogConfig = new MatDialogConfig();
       dialogConfig.autoFocus = true;
 
       dialogConfig.data = {
-        position: 
+        position:
         { right: '150px', top: '50px' }
       };
               this.dialog.open(InfoModalComponent, dialogConfig);
 */
-        //const dialogRef = 
-        
+        //const dialogRef =
+
         this.dialog.open(InfoModalComponent, {
           //width: '250px',
           data: {
@@ -59,7 +59,7 @@ export class NavigationComponent implements OnInit {
           //this.animal = result;
         });
         */
-        
+
   }
 
 }

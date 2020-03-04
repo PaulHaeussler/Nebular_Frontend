@@ -18,7 +18,7 @@ export class InfoModalComponent implements OnInit {
 
   onCancel(): void {
     this.dialogRef.close();
-    console.log("Cancel clicked");
+    console.log('Cancel clicked');
   }
 
   ngOnInit() {
