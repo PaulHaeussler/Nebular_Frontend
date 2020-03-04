@@ -25,10 +25,10 @@ export class ModalComponent implements OnInit {
       this.dataFields.push("");
     }
 
-  onCancle(): void {
+  onCancel(): void {
     this.dataFields = [];
     this.dialogRef.close();
-    console.log("Cancle clicked");
+    console.log("Cancel clicked");
   }
 
   addData(dataField) {
