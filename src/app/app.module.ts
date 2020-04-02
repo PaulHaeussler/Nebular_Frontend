@@ -14,6 +14,8 @@ import { MatListModule } from '@angular/material/list';
 import { MaterialModule } from './material.module';
 import { ModalComponent } from './modal/modal.component';
 import { InfoModalComponent } from './info-modal/info-modal.component';
+import { LoginComponent } from './login/login.component';
+import { MatCardModule } from '@angular/material';
 
 
 const appRoutes: Routes = [
@@ -27,6 +29,11 @@ const appRoutes: Routes = [
     redirectTo: '/space',
     pathMatch: 'full'
   },
+  {
+    path: 'login',
+    component: LoginComponent,
+    data: { title: 'Loginmask' }
+  },
   // redirect for "page not found", probably needed later:
   // { path: '**', component: PageNotFoundComponent }
 ];
@@ -37,7 +44,8 @@ const appRoutes: Routes = [
     SpaceComponent,
     NavigationComponent,
     ModalComponent,
-    InfoModalComponent
+    InfoModalComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +58,7 @@ const appRoutes: Routes = [
     MaterialModule,
     MatToolbarModule,
     MatButtonModule,
+    MatCardModule,
     MatSidenavModule,
     MatToolbarModule,
     MatListModule
@@ -57,7 +66,8 @@ const appRoutes: Routes = [
   providers: [],
   entryComponents: [
     ModalComponent,
-    InfoModalComponent
+    InfoModalComponent,
+    LoginComponent
   ],
   bootstrap: [AppComponent]
 })

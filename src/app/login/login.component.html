@@ -1,0 +1,34 @@
+<div class="bg">
+    <div class="content" role="main">
+        <div class="container">
+            <br />
+
+            <div align="center">
+                <mat-card class="transparent">
+
+                    <!-- Simple login page design -->
+                    <mat-form-field appearance="outline" class="space">
+                        <mat-label>Username</mat-label>
+                        <input matInput [(ngModel)]="username">
+                        <mat-icon matSuffix>account_circle</mat-icon>
+                    </mat-form-field>
+                    <br />
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="password">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                    <br />
+                    <button mat-raised-button color="primary" type="submit" class="navbarButton" (click)="confirmLogin()">
+                        Login
+                    </button>
+                </mat-card>
+            </div>
+        </div>
+
+    </div>
+</div>

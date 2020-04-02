@@ -1,0 +1,36 @@
+.bg {
+    background-image: url('../../assets/img/Nebular1.jpg');
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.transparent {
+    background: rgba(224, 224, 224, 0.75);
+    color: black; 
+    width: 60%;
+}
+
+.space {
+    padding-top: 4.5%;
+    padding-bottom: 1.5%;
+}
+
+body, html {
+    height: 100%;
+  }
+
+.nameSpace {
+    padding-top: 1.5em;
+}
+
+.content {
+    display: flex;
+    margin: 32px auto;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
