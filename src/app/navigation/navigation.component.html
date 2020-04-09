@@ -22,12 +22,12 @@
                 <mat-icon class="paddingRight" class="iconSize">info</mat-icon>
             </a>
 
-            <a mat-list-item routerLink='/allModules'>
-                <mat-icon class="paddingRight" class="iconSize">extension</mat-icon>
-            </a>
-
             <a mat-list-item routerLink='/settings'>
                 <mat-icon class="paddingRight" class="iconSize">settings</mat-icon>
+            </a>
+
+            <a mat-list-item routerLink='/login'>
+                <mat-icon class="paddingRight" class="iconSize" (click)="logoff()">power_settings_new</mat-icon>
             </a>
         </mat-nav-list>
     </mat-sidenav>

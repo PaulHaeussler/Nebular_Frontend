@@ -16,6 +16,7 @@ import { ModalComponent } from './modal/modal.component';
 import { InfoModalComponent } from './info-modal/info-modal.component';
 import { LoginComponent } from './login/login.component';
 import { MatCardModule } from '@angular/material';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const appRoutes: Routes = [
@@ -34,6 +35,11 @@ const appRoutes: Routes = [
     component: LoginComponent,
     data: { title: 'Loginmask' }
   },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+    data: { title: 'Profilpage' }
+  },
   // redirect for "page not found", probably needed later:
   // { path: '**', component: PageNotFoundComponent }
 ];
@@ -45,7 +51,8 @@ const appRoutes: Routes = [
     NavigationComponent,
     ModalComponent,
     InfoModalComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

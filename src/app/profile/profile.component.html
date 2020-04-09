@@ -1,0 +1,82 @@
+<div class="bg">
+    <div class="content" role="main">
+        <div class="container">
+            <br />
+
+            <!-- Simple profile information -->
+
+            <div align="center">
+                <mat-card class="transparent">
+                    <mat-card-header class="cardheader">
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>Your Profile</mat-card-title>
+                        <mat-card-subtitle [(ngModel)]="username">{{username}}</mat-card-subtitle>
+                    </mat-card-header>
+                              
+                    <div class="row">
+                        <div class="col-md">
+                            <mat-icon class="iconMiddle">account_circle</mat-icon>
+                        </div>
+                        <div class="col-md">
+                            <mat-form-field appearance="outline" class="space">
+                                <mat-label>Name</mat-label>
+                                <input matInput [(ngModel)]="name">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md">
+                            <mat-form-field appearance="outline" class="space">
+                                <mat-label>Last Name</mat-label>
+                                <input matInput [(ngModel)]="lastname">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md"></div>
+                    </div>
+
+                    <br />
+
+                    <div class="row">
+                        <div class="col-md">
+                            <mat-icon class="iconMiddle">edit</mat-icon>
+                        </div>
+                        <div class="col-md">
+                            <mat-form-field appearance="outline" class="space">
+                                <mat-label>E-Mail</mat-label>
+                                <input matInput [(ngModel)]="mail">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md">
+                            <mat-form-field appearance="outline" class="space">
+                                <mat-label>Passwort</mat-label>
+                                <input matInput [(ngModel)]="passwort">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md"></div>
+                    </div>
+
+                    <br />
+
+                    <div class="row">
+                        <div class="col-md">
+                            <mat-icon class="iconMiddle">language</mat-icon>
+                        </div>
+                        <div class="col-md">
+                            <mat-form-field appearance="outline" class="space">
+                                <mat-label>Language</mat-label>
+                                <input matInput [(ngModel)]="language">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md">
+                            <mat-form-field appearance="outline" class="space">
+                                <mat-label>Country</mat-label>
+                                <input matInput [(ngModel)]="country">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md"></div>
+                    </div>
+
+                </mat-card>
+            </div>
+        </div>
+
+    </div>
+</div>

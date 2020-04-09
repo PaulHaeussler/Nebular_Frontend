@@ -13,6 +13,8 @@ export class NavigationComponent implements OnInit {
   public nameSpace: string;
   public editMode: boolean = false;
   public test;
+  public username;
+  public passwort;
 
   constructor(
     public dialog: MatDialog
@@ -22,6 +24,11 @@ export class NavigationComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  public logoff() {
+    this.username = "";
+    this.passwort = "";
   }
 
   public editNamespace(name) {
