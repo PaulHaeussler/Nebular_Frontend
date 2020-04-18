@@ -1,0 +1,68 @@
+<div class="position">
+    <h1 mat-dialog-title>{{data.name}}</h1>
+    <mat-dialog-content>
+        <div *ngFor="let dataField of dataFields">
+            <div align="center">
+
+                <div class="row">
+                    <div class="col-md">
+                        <p>Choose a parameter:</p>
+                    </div>
+                    <div class="col-md">
+                        <mat-form-field>
+                            <mat-label>Parameter</mat-label>
+                            <mat-select>
+                                <mat-option *ngFor="let param of parameters" [value]="param">{{param}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md">
+                        <p>Add value for selected parameter:</p>
+                    </div>
+                    <div class="col-md">
+                        <mat-form-field>
+                            <mat-label>Value</mat-label>
+                            <input matInput [(ngModel)]="value">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md">
+                        <p>Choose a predictor:</p>
+                    </div>
+                    <div class="col-md">
+                        <mat-form-field>
+                            <mat-label>Predictor</mat-label>
+                            <mat-select>
+                                <mat-option *ngFor="let predictor of predictors" [value]="predictor">{{predictor}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </mat-dialog-content>
+
+    <div mat-dialog-actions>
+        <button mat-button (click)="onCancel()">Cancel</button>
+        <button mat-button [mat-dialog-close]="data.name" cdkFocusInitial (click)="confirm()">Confirm</button>
+    </div>
+
+</div>
+
+<!--
+
+                <mat-form-field>
+                    <input matInput [(ngModel)]="dataField">
+                </mat-form-field>
+
+                <button mat-button (click)="addField(dataField)">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+-->

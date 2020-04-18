@@ -30,7 +30,6 @@ export class LoginComponent implements OnInit {
 
   public signUp(){
     console.log("in signUp");
-
     this.dialog.open(SignupModalComponent);
   }
 

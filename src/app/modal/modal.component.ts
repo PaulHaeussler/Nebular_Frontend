@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Module } from '../module';
+import { AddDataComponent } from '../add-data/add-data.component';
 
 @Component({
   selector: 'app-modal',
@@ -14,11 +15,11 @@ export class ModalComponent implements OnInit {
   name: string;
   factorY: string;
   factorZ: string;
-  public addData1: string;
   private dataFields: string[] = [];
   public singleField: boolean = true;
 
   constructor(
+    public dialog: MatDialog,
     public dialogRef: MatDialogRef<ModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Module) {
 
@@ -31,20 +32,21 @@ export class ModalComponent implements OnInit {
     console.log('Cancel clicked');
   }
 
-  addData(dataField) {
-    this.dataFields.push(dataField);
-    this.singleField = false;
-
-    console.log(this.singleField);
-    console.log('dataField: ' + dataField + ' of datafields Array: ' + this.dataFields);
-    dataField = '';
-    return dataField;
+  addData() {
+    console.log("in addData");
+    this.dialogRef.close();
+    this.dialog.open(AddDataComponent, {
+      //width: '250px',
+      data: {
+        module: this.data.tag,
+        name: this.data.name,
+      }
+    });
   }
 
   runModule(dataField): void {
-    this.dataFields.push(dataField);
-    this.dataFields.splice(0, 1);
-    console.log('Run Module clicked; dataFieldsArray: ' + this.dataFields);
+    console.log('Run Module clicked');
+    this.dialogRef.close();
   }
 
   ngOnInit() {

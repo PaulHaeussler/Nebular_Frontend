@@ -11,22 +11,22 @@ export class SpaceComponent implements OnInit {
 
   animal: string;
   name: string;
-  modules = ["planet2", "planet3", "planet4", "planet5", "planet6"];
+  modules = ["californiaHousing", "planet3", "planet4", "planet5", "planet6"];
 
 
   constructor(public dialog: MatDialog) {
 
   }
 
-  openDialog(module, name, factorY, factorZ): void {
+  openDialog(modul, name, factorY, factorZ): void {
     console.log("Planet clicked!");
-    var moduleIndex = this.modules.indexOf(module);
+    var moduleIndex = this.modules.indexOf(modul);
     if (moduleIndex != -1) {
       console.log("index of module in modules array: " + moduleIndex);
       const dialogRef = this.dialog.open(ModalComponent, {
         //width: '550px',
         data: {
-          tag: module,
+          tag: modul,
           name: name,
           factorY: factorY,
           factorZ: factorZ,

@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationComponent } from './navigation/navigation.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MaterialModule } from './material.module';
@@ -18,6 +19,7 @@ import { LoginComponent } from './login/login.component';
 import { MatCardModule } from '@angular/material';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupModalComponent } from './signup-modal/signup-modal.component';
+import { AddDataComponent } from './add-data/add-data.component';
 
 
 const appRoutes: Routes = [
@@ -54,7 +56,8 @@ const appRoutes: Routes = [
     InfoModalComponent,
     LoginComponent,
     ProfileComponent,
-    SignupModalComponent
+    SignupModalComponent,
+    AddDataComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +73,8 @@ const appRoutes: Routes = [
     MatCardModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    MatSelectModule,
   ],
   providers: [],
   entryComponents: [
@@ -79,7 +83,8 @@ const appRoutes: Routes = [
     LoginComponent,
     SignupModalComponent,
     ProfileComponent,
-    SpaceComponent
+    SpaceComponent,
+    AddDataComponent
   ],
   bootstrap: [AppComponent]
 })

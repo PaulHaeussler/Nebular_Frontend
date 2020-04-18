@@ -13,16 +13,16 @@
     <mat-divider></mat-divider>
     <br />
 
-    <h6>Add Data to train the KI</h6>
-      <div *ngFor="let dataField of dataFields">
-        <mat-form-field>
-          <input matInput [(ngModel)]="dataField">
-        </mat-form-field>
+    <div align="center">
+      <h6>Do you want to add data to train the KI?</h6>
+      <br />
 
-        <button mat-button (click)="addData(dataField)">
-          <mat-icon>add</mat-icon>
-        </button>
-      </div>
+      <button mat-raised-button color="primary" (click)="addData()">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <br />
+
   </mat-dialog-content>
 
   <div mat-dialog-actions>
