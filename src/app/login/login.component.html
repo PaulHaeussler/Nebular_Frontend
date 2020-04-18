@@ -23,9 +23,23 @@
                         </button>
                     </mat-form-field>
                     <br />
-                    <button mat-raised-button color="primary" type="submit" class="navbarButton" (click)="confirmLogin()">
-                        Login
-                    </button>
+
+                    <div class="row">
+                            <div class="col-md"></div>
+
+                        <div class="col-md">
+                            <button mat-raised-button color="primary" type="submit" class="navbarButton" (click)="confirmLogin()">
+                                Login
+                            </button>
+                        </div>
+                        <div class="col-md">
+                            <button mat-raised-button color="primary" type="submit" class="navbarButton" (click)="signUp()">
+                                Sign Up
+                            </button>
+                        </div>
+                        <div class="col-md"></div>
+
+                    </div>
                 </mat-card>
             </div>
         </div>

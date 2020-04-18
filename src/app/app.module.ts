@@ -17,6 +17,7 @@ import { InfoModalComponent } from './info-modal/info-modal.component';
 import { LoginComponent } from './login/login.component';
 import { MatCardModule } from '@angular/material';
 import { ProfileComponent } from './profile/profile.component';
+import { SignupModalComponent } from './signup-modal/signup-modal.component';
 
 
 const appRoutes: Routes = [
@@ -52,7 +53,8 @@ const appRoutes: Routes = [
     ModalComponent,
     InfoModalComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    SignupModalComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +76,10 @@ const appRoutes: Routes = [
   entryComponents: [
     ModalComponent,
     InfoModalComponent,
-    LoginComponent
+    LoginComponent,
+    SignupModalComponent,
+    ProfileComponent,
+    SpaceComponent
   ],
   bootstrap: [AppComponent]
 })

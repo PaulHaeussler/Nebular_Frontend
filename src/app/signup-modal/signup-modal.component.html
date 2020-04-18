@@ -1,0 +1,48 @@
+<div class="position" style="width: 300px; overflow-x: auto;">
+
+    <h1 mat-dialog-title class="center">Sign Up</h1>
+    <mat-dialog-content class="mat-typography">
+
+        <!-- Simple sign up stuff -->
+
+        <div align="center" class="bg">
+
+                <div class="row">
+                    <div class="col-md">
+                        <mat-form-field appearance="outline" class="space">
+                            <mat-label class="text">E-Mail</mat-label>
+                            <input class="text" matInput [(ngModel)]="mail">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="row">
+                    <div class="col-md">
+                        <mat-form-field appearance="outline" class="space">
+                            <mat-label class="text">Passwort</mat-label>
+                            <input class="text" matInput [(ngModel)]="passwort">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md">
+                        <mat-form-field appearance="outline" class="space">
+                            <mat-label class="text">Username</mat-label>
+                            <input class="text" matInput [(ngModel)]="name">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <br />
+
+                <div mat-dialog-actions class="center">
+                    <button mat-raised-button color="primary" type="submit" class="navbarButton" (click)="onCancel()">
+                        Sign Up
+                    </button>
+                </div>
+        </div>
+    </mat-dialog-content>
+</div>

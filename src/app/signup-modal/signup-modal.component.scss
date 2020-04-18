@@ -1,0 +1,57 @@
+.bg {
+    background-image: url('../../assets/img/Nebular1.jpg');
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+  }
+
+.space {
+    padding-top: 4.5%;
+    padding-bottom: 1.5%;
+    color: white;
+}
+
+.content {
+    display: flex;
+    margin: 32px auto;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+   .modal {
+    align-items: center;
+    padding: 0!important;
+
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .spacer {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  .bold {
+      font-weight: bold;
+  }
+
+  .text {
+      color: white;
+      border-color: white;
+  }
