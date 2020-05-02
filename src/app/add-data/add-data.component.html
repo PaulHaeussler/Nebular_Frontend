@@ -4,10 +4,16 @@
         <div *ngFor="let dataField of dataFields">
             <div align="center">
 
+                    <div class="row">
+                            <div class="col-md">
+                                <p>Choose a parameter...</p>
+                            </div>
+                            <div class="col-md">
+                                <p>...and enter a value</p>
+                            </div>
+                        </div>
+
                 <div class="row">
-                    <div class="col-md">
-                        <p>Choose a parameter:</p>
-                    </div>
                     <div class="col-md">
                         <mat-form-field>
                             <mat-label>Parameter</mat-label>
@@ -15,12 +21,6 @@
                                 <mat-option *ngFor="let param of parameters" [value]="param">{{param}}</mat-option>
                             </mat-select>
                         </mat-form-field>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md">
-                        <p>Add value for selected parameter:</p>
                     </div>
                     <div class="col-md">
                         <mat-form-field>
@@ -30,19 +30,7 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md">
-                        <p>Choose a predictor:</p>
-                    </div>
-                    <div class="col-md">
-                        <mat-form-field>
-                            <mat-label>Predictor</mat-label>
-                            <mat-select>
-                                <mat-option *ngFor="let predictor of predictors" [value]="predictor">{{predictor}}</mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </div>
-                </div>
+                
             </div>
         </div>
 

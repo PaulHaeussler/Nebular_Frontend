@@ -23,6 +23,29 @@
     </div>
     <br />
 
+    <br />
+    <mat-divider></mat-divider>
+    <br />
+
+    <div align="center">
+        <h6>Or run the module based on the following parameters:</h6>
+        <br />
+  
+        <div class="row">
+            <div class="col-md">
+                <p>Choose a predictor:</p>
+            </div>
+            <div class="col-md">
+                <mat-form-field>
+                    <mat-label>Predictor</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let predictor of predictors" [value]="predictor">{{predictor}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+      </div>
+
   </mat-dialog-content>
 
   <div mat-dialog-actions>

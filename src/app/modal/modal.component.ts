@@ -18,6 +18,12 @@ export class ModalComponent implements OnInit {
   private dataFields: string[] = [];
   public singleField: boolean = true;
 
+  public predictors: string[] = [
+    'bedrooms', 'rooms', 'garden',
+    'population', 'households', 'income',
+    'price_house', 'price_rent',
+  ];
+
   constructor(
     public dialog: MatDialog,
     public dialogRef: MatDialogRef<ModalComponent>,
