@@ -21,6 +21,8 @@
     max-width: 960px;
     flex-direction: column;
     align-items: center;
+    //background-color: darkgray;
+    background-image: url('../../assets/img/Nebular2.jpg');
   }
 
    .modal {
@@ -52,6 +54,12 @@
   }
 
   .text {
-      color: white;
+      color: black;
       border-color: white;
   }
+
+.transparent {
+  background: rgba(224, 224, 224, 0.75);
+  color: black; 
+  width: 60%;
+}
