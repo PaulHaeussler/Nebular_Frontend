@@ -15,36 +15,40 @@
 
     <div align="center">
       <h6>Do you want to add data to train the KI?</h6>
-      <br />
 
       <button mat-raised-button color="primary" (click)="addData()">
         <mat-icon>add</mat-icon>
       </button>
     </div>
-    <br />
 
     <br />
     <mat-divider></mat-divider>
     <br />
 
     <div align="center">
-        <h6>Or run the module based on the following parameters:</h6>
-        <br />
-  
-        <div class="row">
-            <div class="col-md">
-                <p>Choose a predictor:</p>
-            </div>
-            <div class="col-md">
-                <mat-form-field>
-                    <mat-label>Predictor</mat-label>
-                    <mat-select>
-                        <mat-option *ngFor="let predictor of predictors" [value]="predictor">{{predictor}}</mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </div>
+      <h6>Or run the module based on the following parameters:</h6>
+      <br />
+
+      <div class="row" *ngFor="let dataField of dataFields">
+        <div class="col-md">
+          <p>Choose a predictor:</p>
+        </div>
+        <div class="col-md">
+          <mat-form-field>
+            <mat-label>Predictor</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let predictor of predictors" [value]="predictor">{{predictor}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col-md">
+          <button mat-button (click)="moreFields(predictor)">
+            <mat-icon>add</mat-icon>
+          </button>
         </div>
       </div>
+    </div>
 
   </mat-dialog-content>
 
