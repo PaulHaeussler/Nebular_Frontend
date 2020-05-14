@@ -13,7 +13,7 @@
                             </div>
                         </div>
 
-                <div class="row">
+                <div class="row" *ngFor="let datafield of dataFields">
                     <div class="col-md">
                         <mat-form-field>
                             <mat-label>Parameter</mat-label>
@@ -27,6 +27,11 @@
                             <mat-label>Value</mat-label>
                             <input matInput [(ngModel)]="value">
                         </mat-form-field>
+                    </div>
+                    <div class="col-md">
+                        <button mat-button (click)="moreFields(param, value)">
+                            <mat-icon>add</mat-icon>
+                        </button>
                     </div>
                 </div>
 

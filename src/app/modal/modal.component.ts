@@ -50,8 +50,21 @@ export class ModalComponent implements OnInit {
     });
   }
 
+  moreFields(dataField) {
+    this.dataFields.push(dataField);
+    this.singleField = false;
+
+    console.log(this.singleField);
+    console.log('dataField: ' + dataField + ' of datafields Array: ' + this.dataFields);
+    dataField = '';
+    return dataField;
+  }
+
   runModule(dataField): void {
     console.log('Run Module clicked');
+    this.dataFields.push(dataField);
+    this.dataFields.splice(0, 1);
+    console.log('Run Module clicked; dataFieldsArray: ' + this.dataFields);
     this.dialogRef.close();
   }
 

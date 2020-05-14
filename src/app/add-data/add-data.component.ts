@@ -9,7 +9,7 @@ import { Module } from '../module';
 })
 export class AddDataComponent implements OnInit {
 
-  private dataFields: string[] = [];
+  private dataFields: object[] = [];
   public singleField: boolean = true;
   parameters: string[] = [
     'bedrooms', 'rooms', 'garden',
@@ -29,7 +29,7 @@ export class AddDataComponent implements OnInit {
     public dialogRef: MatDialogRef<AddDataComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Module
   ) { 
-    this.dataFields.push('');
+    this.dataFields.push(['', '']);
   }
 
   ngOnInit() {
@@ -41,18 +41,31 @@ export class AddDataComponent implements OnInit {
     console.log('Add Module clicked; dataFieldsArray: ' + this.dataFields);
   }
 
+  moreFields(dataField, value) {
+    this.dataFields.push([dataField, value]);
+    this.singleField = false;
+
+    console.log(this.singleField);
+    console.log('dataField: ' + dataField + ' of datafields Array: ' + this.dataFields);
+    dataField = '';
+    return dataField;
+  }
+
   onCancel(): void {
     this.dataFields = [];
     this.dialogRef.close();
     console.log('Cancel clicked');
   }
 
-  confirm() {
+  confirm(dataField) {
     console.log("in confirm for addData");
+    this.dataFields.push(dataField);
+    this.dataFields.splice(0, 1);
+    console.log('Confirm clicked; dataFieldsArray: ' + this.dataFields);
     this.dialogRef.close();
   }
 
-/*
+  /*
   addData(dataField) {
     this.dataFields.push(dataField);
     this.singleField = false;
